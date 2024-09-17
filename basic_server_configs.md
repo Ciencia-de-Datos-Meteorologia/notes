@@ -25,6 +25,25 @@ apt-file update
 update-command-not-found
 ```
 
+# Modificar configuración de red
+Se debe editar el archivo `/etc/network/interfaces` como super usuario. La estructura del archivo es la siguiente:
+
+```bash
+# interfaces(5) file used by ifup(8) and ifdown(8)
+# Include files from /etc/network/interfaces.d:
+source /etc/network/interfaces.d/*
+
+iface eno1 inet manual
+
+auto brlan
+iface brlan inet static
+      address 172.20.3.55
+      netmask 255.255.255.192
+      gateway 172.20.3.1
+      dns-nameserver 172.20.1.66
+      dns-nameserver 8.8.8.8
+```
+
 # Administrar discos duros
 
 
