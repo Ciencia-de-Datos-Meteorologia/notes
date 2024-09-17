@@ -29,6 +29,10 @@ update-command-not-found
 Se debe editar el archivo `/etc/network/interfaces` como super usuario. La estructura del archivo es la siguiente:
 
 ```bash
+sudo nano /etc/network/interfaces
+```
+
+```bash
 # interfaces(5) file used by ifup(8) and ifdown(8)
 # Include files from /etc/network/interfaces.d:
 source /etc/network/interfaces.d/*
