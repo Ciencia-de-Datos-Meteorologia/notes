@@ -48,6 +48,11 @@ iface brlan inet static
       dns-nameserver 8.8.8.8
 ```
 
+Después ejectuar:
+```bash
+sudo systemctl restart networking
+```
+
 # Administrar discos duros
 
 
