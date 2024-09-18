@@ -58,3 +58,12 @@ sudo systemctl restart networking
 
 
 # Administrar servidor ssh
+
+# Administrar usuarios:
+Para crear un usuario nuevo se debe ejecutar como administrador:
+```bash
+useradd -m -g aplicaciones_climaticas -s /bin/bash {new_user_name}
+passwd {new_user_name}
+```
+
+Los usuarios podrán cambiar su contraseña usando `passwd {user_name}` y su shell usando `chsh`.
