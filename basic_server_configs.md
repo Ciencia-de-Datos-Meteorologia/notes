@@ -68,6 +68,10 @@ passwd {new_user_name}
 
 Los usuarios podrán cambiar su contraseña usando `passwd {user_name}` y su shell usando `chsh`.
 
+Para crear un grupo se usa `groupadd`.
+
+# Configurar pares publico-privados
+
 Sobre la generación de pares de llaves publico-privadas: [Algoritmos y cantidad de bits](https://www.ssh.com/academy/ssh/keygen)
 
 Se deberán generar pares publico-privados utilizando el comando:
@@ -75,3 +79,5 @@ Se deberán generar pares publico-privados utilizando el comando:
 ssh-keygen -t ecdsa -b 521
 ssh-copy-id -i ~/.ssh/id_ecdsa user_name@server_ip
 ```
+
+
