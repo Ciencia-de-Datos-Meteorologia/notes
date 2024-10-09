@@ -282,18 +282,15 @@ Once the virtual machine is created, it may not be accessible due to serial cons
    - Connect to the VM by another method (if possible) or mount its disk on the host machine to edit the files.
    - Edit the file `/etc/default/grub` inside the VM. Then use the following command:
    ```
-
    sudo nano /etc/default/grub
    ```
    - Find the line that begins with `GRUB_CMDLINE_LINUX_DEFAULT` and add the following options at the end:
    ```
-
    console=ttyS0 console=tty0
    ```
 
    It should look like this:
    ```
-
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash console=ttyS0 console=tty0"
    ```
    - Now, update grub by running:
@@ -318,7 +315,6 @@ Once the virtual machine is created, it may not be accessible due to serial cons
 
    Once the configurations are done, reboot the VM. You can do it by running:
    ```
-
    virsh reboot ubuntu-guest
    ```
 
@@ -328,7 +324,6 @@ Once the virtual machine is created, it may not be accessible due to serial cons
 
    After the VM reboot, you can access the console by running:
    ```
-
    virsh console ubuntu-guest
    ```
    You should now see console output and be able to interact with the virtual machine from the host terminal.
