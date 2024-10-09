@@ -332,3 +332,4 @@ Once the virtual machine is created, it may not be accessible due to serial cons
    virsh console ubuntu-guest
    ```
    You should now see console output and be able to interact with the virtual machine from the host terminal.
+
