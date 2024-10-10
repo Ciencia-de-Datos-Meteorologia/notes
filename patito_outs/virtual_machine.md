@@ -328,3 +328,10 @@ Once the virtual machine is created, it may not be accessible due to serial cons
    ```
    You should now see console output and be able to interact with the virtual machine from the host terminal.
 
+   --------------------
+   --------------------
+
+   Para crear la maquina virtual con instalación ubuntu se usa el siguiente comando
+   ```
+   sudo virt-install --name ubuntu-guest --os-variant ubuntu20.04 --vcpus 2 --ram 4096 --location http://ftp.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/ --network bridge=br0,model=virtio --graphics none --extra-args='console=ttyS0,115200n8 serial'
+   ```
