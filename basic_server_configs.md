@@ -101,7 +101,7 @@ Para crear un grupo se usa `groupadd`.
 
 Start SSH agent
 ```
-eval "$ssh-agent -s)"
+eval "$(ssh-agent -s)"
 ```
 
 Then add your SSH private key to the SSH agent
