@@ -53,9 +53,16 @@ To configure a bridged network for both the host (real) machine and the virtual 
 
    ```
    where `addres`, `netmask`, `gateway` and `dns-nameserver` are the network configuration of the host machine.
-   
 
+   - Restart the network service
+     ```
+     sudo systemctl restart networking
+     ```
 
+   After making these changes, the host machine's network interface will be bridged, and you can use the --network bridge=br0 option when creating the virtual machine to connect it to the same network.
+
+   Inside the virtual machine, you can then configure the network interface to use DHCP or a static IP address, depending on your requirements.
+----------------------------
 Creating the Virtual machine
 ----------------------------
 
@@ -87,8 +94,9 @@ Creating the Virtual machine
   - `--extra-args`: Passes additional kernel parameters to the installer.
 
 
- Access the Virtual machine
- --------------------------
+--------------------------
+Access the Virtual machine
+--------------------------
  
 1. If you want to know which virtual machines are created, you can use the following command
    ```
@@ -109,6 +117,7 @@ Creating the Virtual machine
    
 
 
+-----------------
 Possible problems
 -----------------
 ### - Serial console permissions ###
