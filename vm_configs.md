@@ -114,7 +114,27 @@ Access the Virtual machine
    ```
    virsh console ubuntu-guest
    ```
-   
+
+----------------------------
+Deleting the Virtual machine
+----------------------------
+1. Locate the vm you want to erase
+   ```
+   virsh list
+   ```
+
+2. Destroy the virtual machine
+   ```
+   virsh destroy ubuntu-guest
+   ```
+
+3. Undefine virtual machine
+   After destroying the vm, its XML configuration file inside the `/etc/libvirt/qemu` directory and the virtual disks located in `/var/lib/libvirt/images` still exist. 
+
+   To completly remove the virtual machine and all its associated files we need to run:
+   ```
+   virsh undefine ubuntu-guest --remove-all-storage
+   ```
 
 
 -----------------
@@ -174,4 +194,9 @@ Once the virtual machine is created, it may not be accessible due to serial cons
    ```
    You should now see console output and be able to interact with the virtual machine from the host terminal.
 
+
+--------------
+Aditional help
+--------------
+[https://ubuntu.com/blog/kvm-hyphervisor](https://ubuntu.com/blog/kvm-hyphervisor).
    
