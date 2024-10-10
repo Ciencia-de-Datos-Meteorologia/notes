@@ -72,8 +72,6 @@ Para crear un grupo se usa `groupadd`.
 
 # Create a public-provite key paor for SSH to use with GitHub
 
-Sobre la generación de pares de llaves publico-privadas: [Algoritmos y cantidad de bits](https://www.ssh.com/academy/ssh/keygen)
-
 ## 1. Check if you already have SSH keys set up:
    ```
    ls -al ~/.ssh
@@ -125,6 +123,21 @@ You need to add your public key (not the private key) to GitHub.
 - Paste the key into the "Key" field, and give it a title.
 - Click "Add SSH key".
 
+
+## 5. Test your SSH connection
+Finally, test your SSH connection to GitHub:
+```
+ssh -T git@github.com
+```
+
+If everything is set up correctly, you will see a success message similar to:
+```
+Hi username! You've successfully authenticated, but Github does not provide shell access.
+```
+
+-------
+
+Sobre la generación de pares de llaves publico-privadas: [Algoritmos y cantidad de bits](https://www.ssh.com/academy/ssh/keygen)
 
 Se deberán generar pares publico-privados utilizando el comando:
 ```bash
