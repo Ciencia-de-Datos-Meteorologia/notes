@@ -17,6 +17,43 @@ To configure a bridged network for both the host (real) machine and the virtual 
    sudo brctl addif br0 eno1
    sudo ip link set eno1 up
    ```
+   Replace `eno1` with the name of your host's physical network interface.
+
+3. (optional) Configure bridged network using the `/etc/network/interfaces` file on the host machine.
+
+   - Edit the `/etc/network/interfaces` file:
+   ```
+   sudo nano /etc/network/interfaces
+   ```
+   - The file should look like this:
+   ```
+   # This file describes the network interfaces available on your system
+   # and how to activate them. For more information, see interfaces(5).
+
+   source /etc/network/interfaces.d/*
+
+   # The loopback network interface
+   auto lo
+   iface lo inet loopback
+   
+   auto eno1
+   iface eno1 inet manual
+   
+   # Bridge interface
+   auto br0
+   iface br0 inet static
+           address 172.20.3.60        
+           netmask 255.255.255.0
+           gateway 172.20.3.1
+           dns-nameservers 172.20.1.66 8.8.8.8
+           bridge_ports eno1
+           bridge_stp off
+           bridge_fd 0
+           bridge_maxwait 0
+
+   ```
+   where `addres`, `netmask`, `gateway` and `dns-nameserver` are the network configuration of the host machine.
+   
 
 
 Creating the Virtual machine
@@ -50,7 +87,7 @@ Creating the Virtual machine
   - `--extra-args`: Passes additional kernel parameters to the installer.
 
 
- Access the Virtual machine:
+ Access the Virtual machine
  --------------------------
  
 1. If you want to know which virtual machines are created, you can use the following command
