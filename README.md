@@ -1,7 +1,7 @@
 # Notes
 This repository contains notes from installations and configurations.
 
-## [Basic Server Configuration](basic_server_configs.md)
+## [Basic Server Configuration](basic_server_configs/)
 Document with basic configurations for a clean Debian server setup.
 
 ## [Virtual Machine Configuration](vm_configs.md)
