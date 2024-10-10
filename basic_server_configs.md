@@ -53,8 +53,7 @@ iface brlan inet static
       dns-nameserver 172.20.1.66
       dns-nameserver 8.8.8.8
 ```
-
-Después ejectuar:
+Then, to aply the changes, run the next command
 ```bash
 sudo systemctl restart networking
 ```
