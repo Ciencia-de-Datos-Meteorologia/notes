@@ -122,6 +122,7 @@ Deleting the Virtual machine
    ```
    virsh list
    ```
+For the next steps, let's asume the name of the virtual machine is `ubuntu-guest`.
 
 2. Destroy the virtual machine
    ```
