@@ -1,3 +1,24 @@
+Configure a bridged network 
+---------------------------
+To configure a bridged network for both the host (real) machine and the virtual machine, you'll need to follow these steps:
+
+1. Create a bridge interface on the host machine:
+   ```
+   sudo apt-get install bridge-utils
+   sudo brctl addbr br0
+   sudo ip link set br0 up
+   ```
+
+   This creates a bridge interface called `br0` and brings it up.
+
+2. Attach the host's physical network interface to the bridge:
+   ```
+   sudo ip link set eno1 down
+   sudo brctl addif br0 eno1
+   sudo ip link set eno1 up
+   ```
+
+
 Creating the Virtual machine
 ----------------------------
 
