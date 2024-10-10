@@ -28,23 +28,32 @@ Creating the Virtual machine
   - `--graphics none`: Disables the graphical console.
   - `--extra-args`: Passes additional kernel parameters to the installer.
 
-3. Access the Virtual machine:
-   If you want to know which virtual machines are created, you can use the following command
+
+ Access the Virtual machine:
+ --------------------------
+ 
+1. If you want to know which virtual machines are created, you can use the following command
    ```
    virsh list
    ```
-
-   When you have chosen which VM you want to access, make sure it is running. If it's not running, start it with:
+   
+2. When you have chosen which VM you want to access, make sure it is running. If it's not running, start it with:
    ```
    virsh start ubuntu-guest
    ```
-   remember to replace `ubunut-guest` with the name of your VM
+   remember to replace `ubunut-guest` with the name of your VM.
+   
+
+4. And finally, to access the virtual machine, run the following command:
+   ```
+   virsh console ubuntu-guest
+   ```
    
 
 
 Possible problems
 -----------------
-### Serial console permissions ###
+### - Serial console permissions ###
 
 Once the virtual machine is created, it may not be accessible due to serial console permissions. In order to fix this problem you can follow the following steps:
 
