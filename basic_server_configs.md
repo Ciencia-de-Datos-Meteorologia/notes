@@ -70,9 +70,20 @@ Los usuarios podrán cambiar su contraseña usando `passwd {user_name}` y su she
 
 Para crear un grupo se usa `groupadd`.
 
-# Configurar pares publico-privados
+# Create a public-provite key paor for SSH to use with GitHub
 
 Sobre la generación de pares de llaves publico-privadas: [Algoritmos y cantidad de bits](https://www.ssh.com/academy/ssh/keygen)
+
+## 1. Check if you already have SSH keys set up:
+   ```
+   ls -al ~/.ssh
+   ```
+   If you see files like `id_rsa.pub` or `id_ed25510.pub`, you might already have an SSH key. If not, you can create one.
+
+## 2. Generate a new SSH key
+   You 
+   
+
 
 Se deberán generar pares publico-privados utilizando el comando:
 ```bash
