@@ -5,4 +5,4 @@ This repository contains notes from installations and configurations.
 Document with basic configurations for a clean Debian server setup.
 
 ## [Virtual Machine Configuration](vm_configs.md)
-For now, the only configuration that had worked is: [https://ubuntu.com/blog/kvm-hyphervisor](https://ubuntu.com/blog/kvm-hyphervisor).
+Document to create a VM with Ubuntu and its own IP.
