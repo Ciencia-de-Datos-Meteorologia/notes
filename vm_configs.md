@@ -1,5 +1,5 @@
-Configure a bridged network 
----------------------------
+# Configure a bridged network 
+
 To configure a bridged network for both the host (real) machine and the virtual machine, you'll need to follow these steps:
 
 1. Create a bridge interface on the host machine:
@@ -63,8 +63,8 @@ To configure a bridged network for both the host (real) machine and the virtual 
 
    Inside the virtual machine, you can then configure the network interface to use DHCP or a static IP address, depending on your requirements.
 ----------------------------
-Creating the Virtual machine
-----------------------------
+# Creating the Virtual machine
+
 
 1. Install the necessary packages:
    ```
@@ -95,8 +95,8 @@ Creating the Virtual machine
 
 
 --------------------------
-Access the Virtual machine
---------------------------
+# Access the Virtual machine
+
  
 1. If you want to know which virtual machines are created, you can use the following command
    ```
@@ -116,8 +116,8 @@ Access the Virtual machine
    ```
 
 ----------------------------
-Deleting the Virtual machine
-----------------------------
+# Deleting the Virtual machine
+
 1. Locate the vm you want to erase
    ```
    virsh list
@@ -139,9 +139,10 @@ For the next steps, let's asume the name of the virtual machine is `ubuntu-guest
 
 
 -----------------
-Possible problems
------------------
-### - Serial console permissions ###
+# Possible problems
+
+Serial console permissions
+-------------------------
 
 Once the virtual machine is created, it may not be accessible due to serial console permissions. In order to fix this problem you can follow the following steps:
 
@@ -197,7 +198,7 @@ Once the virtual machine is created, it may not be accessible due to serial cons
 
 
 --------------
-Aditional help
---------------
+# Aditional help
+
 [https://ubuntu.com/blog/kvm-hyphervisor](https://ubuntu.com/blog/kvm-hyphervisor).
    
