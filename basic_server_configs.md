@@ -1,23 +1,26 @@
-Estas instrucciones están pensadas desde un usuario, en el caso de ser root se puede omitir las líneas `su -` y los comandos que utilicen `sudo`.
+These instructions are intended for a user, if you are root you can omit the `su -` lines and the commands that use `sudo`.
 
-# Instalar sudo
+# Install sudo
 
-```bash
+```
 su -
 apt-get install sudo
+```
+To modify the sudoers file, run:
 
+```
 visudo
 ```
 
-Acá se configura al usuario para poder utilizar `sudo` con algunos privilegios específicos. En nuestro caso agregamos al archivo lo siguiente en la línea debajo de los permisos del usuario root:
-
-```bash
+Here the user is configured to be able to use `sudo` with some specific privileges. In our case we added the following to the file on the line below the root user permissions:
+```
 # User privilege specification
 root ALL=(ALL:ALL) ALL
 data-science ALL=/usr/bin/apt, /usr/bin/apt-get
 ```
 
-# Instalar sugerencias de paquetería
+# Install package suggestions
+This package helps when you have an idea of the command but you don't know it, so it suggests similar commands.
 
 ```bash
 sudo apt install command-not-found
@@ -25,13 +28,16 @@ apt-file update
 update-command-not-found
 ```
 
-# Modificar configuración de red
-Se debe editar el archivo `/etc/network/interfaces` como super usuario. La estructura del archivo es la siguiente:
+# Modify network settings 
+If you want to modify the IP, netmask, gateway or network port, you must edit the `/etc/network/interfaces` file as sudo. 
+
+To edit the file,
 
 ```bash
 sudo nano /etc/network/interfaces
 ```
 
+The file must seem like this:
 ```bash
 # interfaces(5) file used by ifup(8) and ifdown(8)
 # Include files from /etc/network/interfaces.d:
