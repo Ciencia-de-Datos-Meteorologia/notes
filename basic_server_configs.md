@@ -87,7 +87,43 @@ Sobre la generación de pares de llaves publico-privadas: [Algoritmos y cantidad
    ```
 - `-t ed25519` especifies the type of key.
 - `-C your_email@example.com` adds a comment, wich is typically your email.
-   
+
+  If your system doesn't support `ed25519`, use
+  ```
+  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  ```
+
+  After running the command:
+
+- When prompted to "Enter a file in which to save the key," you can press Enter to use the default location (`~/.ssh/id_ed25519` or `~/.ssh/id_rsa`).
+- Optionally, add a passphrase for extra security, or just press Enter for no passphrase.
+
+
+## 3. Add your SSH key to the SSH agent
+
+Start SSH agent
+```
+eval "$ssh-agent -s)"
+```
+
+Then add your SSH private key to the SSH agent
+```
+ssh-add ~/.ssh/id_ed25519
+```
+(Replace `id_ed25519` with the name of your key file if different.)
+
+## 4. Add the SSH key to your GitHub account
+
+You need to add your public key (not the private key) to GitHub.
+
+- Copy the public key to your clipboard:
+  ```
+  cat ~/.ssh/id_ed25519.pub
+  ```
+  Copy the entire output.
+- Go to your [GitHub SSH settings](https://github.com/settings/keys) and click "New SSH key".
+- Paste the key into the "Key" field, and give it a title.
+- Click "Add SSH key".
 
 
 Se deberán generar pares publico-privados utilizando el comando:
