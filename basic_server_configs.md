@@ -81,12 +81,12 @@ Para crear un grupo se usa `groupadd`.
 ## 2. Generate a new SSH key
    You can generate a new SSH key using the `ssh-keygen` command:
    ```
-   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ssh-keygen -t ecdsa -b 521
    ```
-- `-t ed25519` especifies the type of key.
-- `-C your_email@example.com` adds a comment, wich is typically your email.
+- `-t ecdsa` especifies the type of key.
+- `-b 521` is the size of the key.
 
-  If your system doesn't support `ed25519`, use
+  If your system doesn't support `ecdsa`, use
   ```
   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   ```
@@ -106,9 +106,9 @@ eval "$(ssh-agent -s)"
 
 Then add your SSH private key to the SSH agent
 ```
-ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ecdsa
 ```
-(Replace `id_ed25519` with the name of your key file if different.)
+(Replace `id_ecdsa` with the name of your key file if different.)
 
 ## 4. Add the SSH key to your GitHub account
 
@@ -116,7 +116,7 @@ You need to add your public key (not the private key) to GitHub.
 
 - Copy the public key to your clipboard:
   ```
-  cat ~/.ssh/id_ed25519.pub
+  cat ~/.ssh/id_ecdsa.pub
   ```
   Copy the entire output.
 - Go to your [GitHub SSH settings](https://github.com/settings/keys) and click "New SSH key".
