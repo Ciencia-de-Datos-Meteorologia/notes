@@ -70,7 +70,7 @@ Los usuarios podrán cambiar su contraseña usando `passwd {user_name}` y su she
 
 Para crear un grupo se usa `groupadd`.
 
-# Create a public-provite key paor for SSH to use with GitHub
+# Create a public-private key pair for SSH to use with GitHub
 
 ## 1. Check if you already have SSH keys set up:
    ```
