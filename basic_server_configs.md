@@ -81,7 +81,12 @@ Sobre la generación de pares de llaves publico-privadas: [Algoritmos y cantidad
    If you see files like `id_rsa.pub` or `id_ed25510.pub`, you might already have an SSH key. If not, you can create one.
 
 ## 2. Generate a new SSH key
-   You 
+   You can generate a new SSH key using the `ssh-keygen` command:
+   ```
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
+- `-t ed25519` especifies the type of key.
+- `-C your_email@example.com` adds a comment, wich is typically your email.
    
 
 
