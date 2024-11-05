@@ -71,7 +71,7 @@ To configure a bridged network for both the host (real) machine and the virtual 
    sudo apt-get update
    sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
    ```
-2. Create a new virtual machine:
+2. Create a new virtual machine (ubuntu):
    ```
    sudo virt-install \
    --name ubuntu-guest \
@@ -92,6 +92,20 @@ To configure a bridged network for both the host (real) machine and the virtual 
   - `--network`: Connects the virtual machine to the br0 bridge interface.
   - `--graphics none`: Disables the graphical console.
   - `--extra-args`: Passes additional kernel parameters to the installer.
+
+  In order to create a virtual machine with Debian instead, the code should look like this
+  ```
+   sudo virt-install \
+   --name debian-guest \
+   --os-variant debian11 \
+   --vcpus 2 \
+   --ram 8192 \
+   --disk size=500 \
+   --location http://deb.debian.org/debian/dists/bookworm/main/installer-amd64/ \
+   --network bridge=br0,model=virtio \
+   --graphics none \
+   --extra-args='console=ttyS0,115200n8 serial'
+  ```
 
 
 --------------------------
