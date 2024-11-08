@@ -54,5 +54,9 @@ nano /etc/hosts
 Here you can add all the IP - Alias you want. It just has to be like this:
 ```
 127.0.0.1  localhost
-172.20.0.60
+172.20.0.60  name_computer_host
+172.20.0.61  Computer1
+172.20.0.62  Computer2
+172.20.0.63  Computer3
 ```
+Although this only works for the computer where the file is modified.
