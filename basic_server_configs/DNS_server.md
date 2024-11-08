@@ -57,7 +57,7 @@ In case you have more different IPs range, only add this new range separated by 
 
 
 
-#Alternative way
+# Alternative way
 
 An alternative way to create alias to different IPs without a DNS server is to edit the local file `/etc/hosts`:
 ```
