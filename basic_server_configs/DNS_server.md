@@ -71,4 +71,4 @@ Here you can add all the IP - Alias you want. It just has to be like this:
 172.20.0.62  Computer2
 172.20.0.63  Computer3
 ```
-Although this only works locally for the computer where the file is modified.
+Although, this only works locally for the computer where the file is modified.
