@@ -1,3 +1,4 @@
+# Editing the `.bashrc` file
 There is a file that we can edit if we want to modify the bahavior of our console every time we open a new one. For example, if we want to create functions inside the bash console, this file is the one that we should modify.
 
 To modify the file, we run the command
@@ -20,7 +21,7 @@ avenv () {
     if [ -z "$1" ]; then
         deactivate
     else
- source ~/Documents/.python-envs/$1/bin/activate  # commented out by conda initialize
+ source ~/Documents/.python-envs/$1/bin/activate
     fi
 }
 
