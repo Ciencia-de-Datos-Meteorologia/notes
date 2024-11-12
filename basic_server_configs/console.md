@@ -11,7 +11,7 @@ Once we modified the file, just close it and restart the terminal. You can do it
 source ~/.bashrc
 ```
 
-Here are some usefull functions we could add.
+Here are some usefull functions we could add:
 
 Activate a virtual environment
 -----------------------------
