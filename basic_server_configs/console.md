@@ -1,0 +1,1 @@
+There is a file that we can edit if we want to modify the bahavior of our console every time we open a new one. For example, if we want to create functions inside the bash console, this file is the one that we should modify
