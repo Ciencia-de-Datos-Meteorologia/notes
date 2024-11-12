@@ -5,6 +5,11 @@ To modify the file, we run the command
 nano ~/.bashrc
 ```
 
+Once we modified the file, just close it and restart the terminal. You can do it by closing and opening the terminal, or you can execute the following command
+```
+source ~/.bashrc
+```
+
 Here are some usefull functions we could add.
 
 Activate a virtual environment
@@ -20,3 +25,4 @@ avenv () {
 }
 
 ```
+Here, every virtual environment was created on the directory `/home/user/Documents/.python-evns/`.
