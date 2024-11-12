@@ -26,4 +26,9 @@ avenv () {
 }
 
 ```
-Here, every virtual environment was created on the directory `/home/user/Documents/.python-evns/`.
+Here, every virtual environment was created on the directory `/home/user/Documents/.python-evns/`. And then, you can access to a virtual enviroment called `environment1` by just typing
+```
+avenv environment1
+```
+
+If the are already inside the virtual environment, we can call the function (with no argument) and it will deactivate it.
