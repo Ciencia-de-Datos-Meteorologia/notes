@@ -114,7 +114,7 @@ To configure a bridged network for both the host (real) machine and the virtual 
  
 1. If you want to know which virtual machines are created, you can use the following command
    ```
-   virsh list
+   virsh list --all
    ```
    
 2. When you have chosen which VM you want to access, make sure it is running. If it's not running, start it with:
