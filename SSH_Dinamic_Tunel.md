@@ -22,7 +22,7 @@ Firefox
 1. Settings -> General -> Network configuration
 2. Select 'Manual proxy configuration'
 3. Change the following items
-  - Host SOCKS: localhost
-  - Port: 1080
+  - **Host SOCKS**: localhost
+  - **Port**: 1080
 4. Check the SOCKS v5 Proxy option
 5. Save the changes
