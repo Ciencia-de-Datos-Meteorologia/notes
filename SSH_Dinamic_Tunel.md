@@ -26,3 +26,13 @@ Firefox
   - **Port**: 1080
 4. Check the SOCKS v5 Proxy option
 5. Save the changes
+
+Google Chrome or Chromium
+------------------
+Open Chrome from the terminal:
+```
+google-chrome --proxy-server="socks5://localhost:1080"
+```
+
+## Step 3: Access the local IP addresses
+Once the proxy is configured, any request made from the browser will go through the SSH tunnel and local IP addresses will be visible.
