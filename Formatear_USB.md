@@ -16,3 +16,5 @@ Then run the following
 ```
 sudo mkfs.vfat -F 32 /dev/sdX
 ```
+
+This will use a FAT32 format, but you can choose NTFS or exFAT format.
