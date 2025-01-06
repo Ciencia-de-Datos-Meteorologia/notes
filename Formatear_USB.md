@@ -5,4 +5,4 @@ On the bash terminal use the command to know the name of the USB
 ```
 lsblk
 ```
-Its name should be something like `sdX´
+Its name should be something like 'sdX'
