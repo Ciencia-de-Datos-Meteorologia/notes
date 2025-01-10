@@ -7,7 +7,7 @@ Zuko
 -----
 En el caso específico de Zuko, los archivos que modifiqué fueron
 - visudo
-- chmod /dev/sda 660
+- chmod 660 /dev/sda 
 - /etc/ssh/sshd_config
 - /etc/network/interfaces
   Normalmente se ve así
