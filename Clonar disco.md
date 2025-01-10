@@ -8,6 +8,7 @@ Zuko
 En el caso específico de Zuko, los archivos que modifiqué fueron
 - visudo
 - chmod /dev/sda 660
+- /etc/ssh/sshd_config
 - /etc/network/interfaces
   Normalmente se ve así
 ```
@@ -68,4 +69,4 @@ iface eno1 inet static
 ```
 
   
-- /etc/ssh/sshd_config
+
