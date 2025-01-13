@@ -69,4 +69,6 @@ iface eno1 inet static
 ```
 
   
-
+Aang
+-----
+`/etc/fstab`
