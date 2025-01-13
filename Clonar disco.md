@@ -71,4 +71,4 @@ iface eno1 inet static
   
 Aang
 -----
-`/etc/fstab`
+Se modifica el archivo `/etc/fstab` con los UUID que se muestran con el comando `blkid`
