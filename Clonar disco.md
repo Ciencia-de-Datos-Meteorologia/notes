@@ -1,6 +1,6 @@
 El comando para clonar el disco `sda` de una computadora hacia el disco `sdb` de otra computadora es:
 ```
-sudo dd if=/dev/sda bs=4M | ssh usuario@IP_destino "sudo dd of=/dev/sdb bs=4M status=progress"
+sudo dd if=/dev/sda bs=4M status=progress | ssh usuario@IP_destino "sudo dd of=/dev/sdb bs=4M status=progress"
 ```
 
 Zuko
