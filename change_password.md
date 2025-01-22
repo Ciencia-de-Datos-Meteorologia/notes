@@ -1,4 +1,4 @@
-# Change the root password
+# Change the user password on Debian
 In some cases you must want to replace the old password with a new one. It doesn't matter what type of user you are (user or root), the process to update the password is very simple. 
 First of all, you must be on a terminal with the `user` session on. Then all you have to do is run the comand
 ```
