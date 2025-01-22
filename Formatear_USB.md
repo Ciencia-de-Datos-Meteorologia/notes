@@ -9,7 +9,7 @@ Its name should be something like `sdX`. where `X` is a letter like `a`, `b`, `c
 
 Once you have located the USB, use the command 
 ```
-sudo umount /dev/sdb
+sudo umount /dev/sdX
 ```
 
 Then run the following 
