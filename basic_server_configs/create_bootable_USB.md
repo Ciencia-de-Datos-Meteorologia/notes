@@ -18,6 +18,6 @@ ls -lh
 
 To write the ISO image of Debian on the USB, run the following command
 ```
-sudo dd if=debian-12.0.0-amd64-netinst.iso of=/dev/sdc bs=1M status=progress conv=noerror,sync
+sudo dd if=debian-12.0.0-amd64-netinst.iso of=/dev/sdc bs=1M status=progress conv=noerror
 ```
 where `debian-12.0.0-amd64-netinst.iso` is the name of the ISO.
