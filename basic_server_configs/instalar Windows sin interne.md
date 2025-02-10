@@ -9,6 +9,9 @@ Si durante la instalación de Windows aparece la pantalla "Vamos a conectarte a 
 
 2. **Ejecutar el comando de omisión**  
    En la consola, escribe el siguiente comando y presiona `Enter`:
+```bash
+oobe/bypassnro
+```
 
 3. **Reinicio automático**  
 Tu equipo se reiniciará automáticamente. Cuando vuelva a iniciar la instalación, aparecerá una nueva opción.
