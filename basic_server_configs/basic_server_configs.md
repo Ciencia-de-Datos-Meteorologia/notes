@@ -6,7 +6,17 @@ These instructions are intended for a user, if you are root you can omit the `su
 # Administrar servidor ssh
 
 # Administrar usuarios:
-Para crear un usuario nuevo se debe ejecutar como administrador:
+- Para visualizar los usuarios existentes utiliza el siguiente comando como administrador
+```
+cat /etc/passwd
+```
+
+- Para ver los grupos a los que pertenece un usuario, usa:
+```
+groups {user_name}
+```
+
+- Para crear un usuario nuevo se debe ejecutar como administrador:
 ```bash
 useradd -m -g aplicaciones_climaticas -s /bin/bash {new_user_name}
 passwd {new_user_name}
