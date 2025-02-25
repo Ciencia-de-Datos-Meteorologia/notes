@@ -1,4 +1,8 @@
 If you are managing a server's computer, you might want to know some basic commads. if you want to execute the commands found inside the file, you must enter on `user root`
+
+Users
+-------
+
 # Create users
 ```
 useradd -m -s /bin/bash {user's name}
@@ -20,8 +24,21 @@ sudo usermod -d /nuevo/home/nombre_usuario nombre_usuario  # Change the home dir
 sudo usermod -l nuevo_nombre nombre_usuario  # Change the user's name
 sudo usermod -G grupo nombre_usuario  # Add user to a group
 ```
-# Erase a user
+# Erase users
 ```
 userdel -r {user's name}
 ```
 - `-r`: Delete the user and his directory `/home/{user's name}`
+
+Groups 
+-------
+
+# Create groups
+```
+group add {group's name}
+```
+
+# Add user to a group 
+```
+usermod -aG {group's name} {user's name}
+
