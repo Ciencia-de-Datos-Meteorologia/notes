@@ -88,8 +88,8 @@ This command's exit is something like this
 
 where `-rw-r--r--` are the permissions and
 
--`r` = Read
--`w` = Write    
--`x` = eXecute
+- `r` = Read
+- `w` = Write    
+- `x` = eXecute
 
 
