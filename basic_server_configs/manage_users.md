@@ -24,7 +24,7 @@ sudo usermod -d /nuevo/home/nombre_usuario nombre_usuario  # Change the home dir
 sudo usermod -l nuevo_nombre nombre_usuario  # Change the user's name
 sudo usermod -G grupo nombre_usuario  # Add user to a group
 ```
-# Erase users
+# Delete users
 ```
 userdel -r {user's name}
 ```
@@ -32,6 +32,18 @@ userdel -r {user's name}
 
 Groups 
 -------
+A group is a collection of user accounts that share certain permissions and privileges over some files, directories and resorces of the system.
+
+# Examples 
+
+Let's assume many users need access to  '/opt/meteorologia'. Insted of assingning permissions to each user, you can create a group:
+```
+sudo groupadd meteorologos
+sudo chown :meteorologos /opt/meteorologia
+sudo chmod 770 /opt/meteorologia
+sudo usermod -aG meteorologos usuario1
+```
+
 
 # Create groups
 ```
@@ -44,4 +56,15 @@ usermod -aG {group's name} {user's name}
 ```
 where
 -  `-aG`: Append the user without removiming it from other groups.
+
+# Delete user from group
+
+```
+gpasswd -d {user's name} {group's name}
+```
+
+# Delete group
+```
+groupdel {group's name}
+```
 
