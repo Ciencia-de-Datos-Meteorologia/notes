@@ -47,7 +47,7 @@ sudo usermod -aG meteorologos usuario1
 
 # Create groups
 ```
-group add {group's name}
+groupadd {group's name}
 ```
 
 # Add user to a group 
