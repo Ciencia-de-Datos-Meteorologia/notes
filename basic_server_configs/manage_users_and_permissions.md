@@ -86,10 +86,9 @@ This command's exit is something like this
 -rw-r--r-- 1 rodrigo usuarios 1234 feb 25 12:00 documento.txt
 ```
 
-where 
-- `-rw-r--r--` are the permissions
-  -`r` = Read
-  -`w` = Write    
-  -`x` = eXecute
+where `-rw-r--r--` are the permissions and
+-`r` = Read
+-`w` = Write    
+-`x` = eXecute
 
 
