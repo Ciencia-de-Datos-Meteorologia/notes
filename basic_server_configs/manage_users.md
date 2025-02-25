@@ -11,3 +11,13 @@ To asign the new user's password:
 ```
 passwd {user's name}
 ```
+
+# Modify users
+Some usefull options to modify the user's characterictics are:
+```
+sudo usermod -s /bin/zsh nombre_usuario  # Change the shell tp Zsh
+sudo usermod -d /nuevo/home/nombre_usuario nombre_usuario  # Change the home directory
+sudo usermod -l nuevo_nombre nombre_usuario  # Change the user's name
+sudo usermod -G grupo nombre_usuario  # Add user to a group
+```
+
