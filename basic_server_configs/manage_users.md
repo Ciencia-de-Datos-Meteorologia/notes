@@ -41,4 +41,7 @@ group add {group's name}
 # Add user to a group 
 ```
 usermod -aG {group's name} {user's name}
+```
+where
+-  `-aG`: Append the user without removiming it from other groups.
 
