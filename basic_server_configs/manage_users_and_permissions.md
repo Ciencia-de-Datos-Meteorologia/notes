@@ -1,9 +1,9 @@
 If you are managing a server's computer, you might want to know some basic commads. if you want to execute the commands found inside the file, you must enter on `user root`
 
-Users
--------
+# Users
 
-# Create users
+Create users
+------------
 ```
 useradd -m -s /bin/bash {user's name}
 ```
@@ -16,7 +16,8 @@ To asign the new user's password:
 passwd {user's name}
 ```
 
-# Modify users
+Modify users
+------------
 Some usefull options to modify the user's characterictics are:
 ```
 sudo usermod -s /bin/zsh nombre_usuario  # Change the shell tp Zsh
@@ -24,18 +25,19 @@ sudo usermod -d /nuevo/home/nombre_usuario nombre_usuario  # Change the home dir
 sudo usermod -l nuevo_nombre nombre_usuario  # Change the user's name
 sudo usermod -G grupo nombre_usuario  # Add user to a group
 ```
-# Delete users
+Delete users
+------------
 ```
 userdel -r {user's name}
 ```
 - `-r`: Delete the user and his directory `/home/{user's name}`
 
-Groups 
--------
+# Groups 
+
 A group is a collection of user accounts that share certain permissions and privileges over some files, directories and resorces of the system.
 
-# Examples 
-
+Examples 
+------------
 Let's assume many users need access to  '/opt/meteorologia'. Insted of assingning permissions to each user, you can create a group:
 ```
 sudo groupadd meteorologos
@@ -45,32 +47,34 @@ sudo usermod -aG meteorologos usuario1
 ```
 
 
-# Create groups
+Create groups
+------------
 ```
 groupadd {group's name}
 ```
 
-# Add user to a group 
+Add user to a group 
+------------
 ```
 usermod -aG {group's name} {user's name}
 ```
 where
 -  `-aG`: Append the user without removiming it from other groups.
 
-# Delete user from group
-
+Delete user from group
+------------
 ```
 gpasswd -d {user's name} {group's name}
 ```
 
-# Delete group
+Delete group
+------------
 ```
 groupdel {group's name}
 ```
 
 
-Permissions
-----------
+# Permissions
 
 To watch the file's and/or directory's permissions, run
 ```
