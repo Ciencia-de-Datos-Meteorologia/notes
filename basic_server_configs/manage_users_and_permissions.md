@@ -93,6 +93,8 @@ where `-rw-r--r--` are the permissions and
 - `x` = eXecute
 
 # Change permissions 
+Symbolic Format
+---------------
 ```
 chmod u+rwx,g+r,o-rwx {file's name}
 ```
@@ -110,3 +112,7 @@ For example
 chmod u+x script.sh
 ```
 this allow execution permission only to the owner.
+
+Numeric Format
+--------------
+
