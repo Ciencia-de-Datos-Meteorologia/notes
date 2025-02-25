@@ -104,3 +104,9 @@ where
 - `r` reading
 - `w` writing
 - `x` execute 
+
+For example
+```
+chmod u+x script.sh
+```
+this allow execution permission only to the owner.
