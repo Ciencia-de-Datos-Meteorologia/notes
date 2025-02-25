@@ -81,7 +81,7 @@ To watch the file's and/or directory's permissions, run
 ls -l {file's name}
 ```
 
-This command's exit is something like this
+The exit is something like this
 ```
 -rw-r--r-- 1 rodrigo usuarios 1234 feb 25 12:00 documento.txt
 ```
@@ -92,4 +92,15 @@ where `-rw-r--r--` are the permissions and
 - `w` = Write    
 - `x` = eXecute
 
+# Change permissions 
+```
+chmod u+rwx,g+r,o-rwx {file's name}
+```
 
+where
+- `u` User (owner)
+- `g` group
+- `o` others
+- `r` reading
+- `w` writing
+- `x` execute 
