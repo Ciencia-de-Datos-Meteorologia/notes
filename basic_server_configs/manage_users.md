@@ -20,4 +20,8 @@ sudo usermod -d /nuevo/home/nombre_usuario nombre_usuario  # Change the home dir
 sudo usermod -l nuevo_nombre nombre_usuario  # Change the user's name
 sudo usermod -G grupo nombre_usuario  # Add user to a group
 ```
-
+# Erase a user
+```
+userdel -r {user's name}
+```
+- `-r`: Delete the user and his directory `/home/{user's name}`
