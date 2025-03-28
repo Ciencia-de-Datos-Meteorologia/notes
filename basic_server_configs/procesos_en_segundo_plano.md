@@ -10,3 +10,16 @@ donde
 - `&` lo ejecuta en segundo plano.
 
 
+Visualizar procesos 
+-----------------
+
+Para ver el proceso en ejecución utiliza el comando:
+```
+ps aux | grep tu_script.py
+```
+
+Si necesistas detener el proceso, utiliza
+```
+kill <PID>
+```
+donde `<PID>` es el ID del proceso que puedes encontrar con el comando anterior.
