@@ -1,0 +1,1 @@
+En algunos casos específicos será necesario que un proceso se ejecute de manera permanente, pero si se ejecuta de manera normal, cada vez que se cierre la terminal desde la que se ejecuta, el proceso se cancelará.
