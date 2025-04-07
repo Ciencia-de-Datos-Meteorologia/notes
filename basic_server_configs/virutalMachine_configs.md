@@ -70,6 +70,7 @@ To configure a bridged network for both the host (real) machine and the virtual 
    ```
    sudo apt-get update
    sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+   sudo apt install virtinst
    ```
 2. Create a new virtual machine (ubuntu):
    ```
