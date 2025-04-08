@@ -1,6 +1,13 @@
 # Configure a bridged network 
 
-The first step to create a virtual machine is creating a `bridged network`
+The first step to create a virtual machine is creating a `bridged network`. This allows the computers (real and virtuals) to share the physical net port. 
+
+This manual is for a host machine with Debian 12, if you have a different Linux's distribution you may have to change a few things. 
+
+## Option 1
+
+
+## Option 2
 
 To configure a bridged network for both the host (real) machine and the virtual machine, you'll need to follow these steps:
 
