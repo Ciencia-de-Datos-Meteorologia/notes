@@ -1,5 +1,7 @@
 # Configure a bridged network 
 
+The first step to create a virtual machine is creating a `bridged network`
+
 To configure a bridged network for both the host (real) machine and the virtual machine, you'll need to follow these steps:
 
 1. Create a bridge interface on the host machine:
