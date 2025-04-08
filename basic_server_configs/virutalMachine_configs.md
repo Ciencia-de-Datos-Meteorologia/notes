@@ -5,7 +5,19 @@ The first step to create a virtual machine is creating a `bridged network`. This
 This manual is for a host machine with Debian 12, if you have a different Linux's distribution you may have to change a few things. 
 
 ## Option 1
-
+1. Deactivate the IP on the physical interface
+   Create the file `<network interface's name>.network`
+   ```
+   sudo nano /etc/systemd/network/enp3s0.network
+   ```
+   and write this on it:
+    ```
+   [Match]
+   Name=enp3s0
+   
+   [Network]
+   Bridge=br0
+   ```
 
 ## Option 2
 
