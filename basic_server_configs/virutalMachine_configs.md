@@ -10,7 +10,7 @@ This manual is for a host machine with Debian 12, if you have a different Linux'
    ```
    sudo nano /etc/systemd/network/enp3s0.network
    ```
-   and write this on it:
+   and write on it:
     ```
    [Match]
    Name=enp3s0
@@ -18,6 +18,41 @@ This manual is for a host machine with Debian 12, if you have a different Linux'
    [Network]
    Bridge=br0
    ```
+2. Create the interface `br0` (the bridge)
+   Create the file
+   ```
+   sudo nano /etc/systemd/network/br0.netdev
+   ```
+   and write
+   ```
+   [NetDev]
+   Name=br0
+   Kind=bridge
+   ```
+3. Asign the IP to the bridge
+   Create the file
+   ```
+   sudo nano /etc/systemd/network/br0.network
+   ```
+   [Match]
+   Name=br0
+   
+   [Network]
+   Address=192.168.1.100/24
+   Gateway=192.168.1.1
+   DNS=8.8.8.8
+   ```
+
+4. Reboot the `systemd-networkd`
+   ```
+   sudo systemctl restart systmed-networkd
+   ```
+
+5. Check it was created correctly
+   ```
+   ip a show br0
+   ```
+   
 
 ## Option 2
 
