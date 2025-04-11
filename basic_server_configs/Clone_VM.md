@@ -6,12 +6,24 @@ First, let's assume the `computer A` is the computer where the virtual machine i
 Find the VM's disk
 ------------------------
 ```
-virsh domblklist {vm-name}
+sudo virsh domblklist {vm-name}
 ```
 you'll see something like 
 
 ```
 Target     Source
 ------------------------------------------------
-vda        /var/lib/libvirt/images/nombre-vm.qcow2
+vda        /var/lib/libvirt/images/{vm-name}.qcow2
+```
+
+
+Clone the disk
+--------------
+First, shut down the VM
+```
+virsh shutdown {vm-name}
+```
+once it's down, clone the disk
+```
+cp /var/lib/libvirt/images/nombre-vm.qcow2 /var/lib/libvirt/images/nombre-vm-clon.qcow2
 ```
