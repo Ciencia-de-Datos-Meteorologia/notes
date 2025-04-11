@@ -34,8 +34,37 @@ gzip /var/lib/libvirt/images/{clon-vm-name}.qcow2
 
 Transfer the disk to the `computer B`
 ---------------------------------
-From the `computer A` run
+On the `computer A` run
 ```
-scp /var/lib/libvirt/images/{clon-vm-name}.qcow2 user@{computer B's IP}:~/
+sudo scp /var/lib/libvirt/images/{clon-vm-name}.qcow2.gz user@{computer B's IP}:/var/lib/libvirt/images/
 ```
 
+Decompress the file
+-------------------
+On the `computer B` run
+```
+gunzip {clon-vm-name}.qcow2.gz
+```
+
+Create the new VM 
+-----------------
+Now that we already have the image of the disk on the `computer B`, let's give `libvirt` the access to open the image of the disk
+```
+sudo chown libvirt-qemu:kvm /var/lib/libvirt/images/{clon-vm-name}.qcow2
+sudo chmod 644 /var/lib/libvirt/images/{clon-vm-name}.qcow2
+```
+
+Now, finally, we create the clon of the VM with the following command:
+
+```
+sudo virt-install \
+  --name {VM name} \
+  --memory {RAM} \
+  --vcpus 2 \
+  --disk "path=/var/lib/libvirt/images/{clon-vm-name}.qcow2,format=qcow2,bus=virtio" \
+  --os-variant debian11 \
+  --import \
+  --network bridge=br0,model=virtio \
+  --graphics none \
+  --console pty
+```
