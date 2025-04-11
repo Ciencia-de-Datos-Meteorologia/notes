@@ -5,6 +5,7 @@ First, let's assume the `computer A` is the computer where the virtual machine i
 
 Find the VM's disk
 ------------------------
+On `computer B`
 ```
 sudo virsh domblklist {vm-name}
 ```
