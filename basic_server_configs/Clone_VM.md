@@ -3,3 +3,15 @@ If some day you wake up and feel a wish to clone a virtual machine and place it 
 
 First, let's assume the `computer A` is the computer where the virtual machine is located, and `computer B` is the computer where we want to install the VM. 
 
+Find the VM's disk
+------------------------
+```
+virsh domblklist {vm-name}
+```
+you'll see something like 
+
+```
+Target     Source
+------------------------------------------------
+vda        /var/lib/libvirt/images/nombre-vm.qcow2
+```
