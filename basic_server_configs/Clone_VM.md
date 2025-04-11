@@ -31,7 +31,9 @@ cp /var/lib/libvirt/images/{vm-name}.qcow2 /var/lib/libvirt/images/{clon-vm-name
 
 Compress the image
 -------------------
+```
 gzip /var/lib/libvirt/images/{clon-vm-name}.qcow2
+```
 
 Transfer the disk to the `computer B`
 ---------------------------------
