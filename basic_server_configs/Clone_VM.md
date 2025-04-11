@@ -25,5 +25,5 @@ virsh shutdown {vm-name}
 ```
 once it's down, clone the disk
 ```
-cp /var/lib/libvirt/images/nombre-vm.qcow2 /var/lib/libvirt/images/nombre-vm-clon.qcow2
+cp /var/lib/libvirt/images/{vm-name}.qcow2 /var/lib/libvirt/images/{clone-vm-name}.qcow2
 ```
