@@ -12,8 +12,12 @@ mkdir -p /mnt/backup
 and mount the partition 
 ```
 mount /dev/sdX2 /mnt/backup
+```
 
 Option 1
 --------
 
 One option to create a backup on a external disk is using the `rsync` command. 
+```
+sudo rsync -aAXv / --exclude={"/proc","/sys","/dev","/run","/tmp","/mnt","/media","/lost+found"} /ruta/de/respaldo
+```
