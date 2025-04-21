@@ -34,7 +34,7 @@ where the last path is where the backup will be saved.
 ### Note
 For some reason, the images of the virtual machines are not copying right, so I convine the 2 options like this 
 ```
-sudo rsync -aAXv /var /etc /home/data-science/automatizacion_bash/ /home/data-science/.config/ /home/data-science/.gitconfig/ /home/data-science/interfaz_database/ /home/data-science/mapaClima/ --exclude={/var/lib/libvirt/images/} /mnt/backup/ZUKO
+sudo rsync -av --exclude={/var/lib/libvirt/images/} /var /etc /home/data-science/automatizacion_bash/ /home/data-science/.config/ /home/data-science/.gitconfig/ /home/data-science/interfaz_database/ /home/data-science/mapaClima/ /mnt/backup/ZUKO
 ```
 
 And then copy the VM manually with
