@@ -27,5 +27,5 @@ Option 2
 
 Use the same command but only specify which directories you want
 ```
-sudo rsync -aAXv /var /etc /home/data-science/automatizacion_bash/ /home/data-science/.config/ /home/data-science/.gitconfig/ /home/data-science/interfaz_database/ /home/data-science/mapaClima/
+sudo rsync -aAXv /var /etc /home/data-science/automatizacion_bash/ /home/data-science/.config/ /home/data-science/.gitconfig/ /home/data-science/interfaz_database/ /home/data-science/mapaClima/ /mnt/backup/ZUKO
 ```
