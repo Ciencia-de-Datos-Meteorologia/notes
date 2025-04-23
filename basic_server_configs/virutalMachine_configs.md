@@ -33,7 +33,6 @@ This manual is for a host machine with Debian 12, if you have a different Linux'
    Create the file
    ```
    sudo nano /etc/systemd/network/br0.network
-   ```
    [Match]
    Name=br0
    
