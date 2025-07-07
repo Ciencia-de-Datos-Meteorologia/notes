@@ -37,7 +37,7 @@ sudo apt install autossh
 Crea un archivo llamado autossh-tunnel.service en /etc/systemd/system/:
 
 Pega el siguiente contenido, ajustando las variables REMOTE_USER, REMOTE_HOST, REMOTE_PORT y LOCAL_PORT según tu caso:
-
+```
 [Unit]
 Description=AutoSSH túnel SSH persistente
 After=network.target
@@ -58,7 +58,7 @@ RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
-
+```
 Si quieres exponer localmente localhost:5000 en el servidor remoto 138.118.104.87 en el puerto 5000, y tu usuario local es data-base, el ExecStart sería:
 ```
 ExecStart=/usr/bin/autossh -M 0 \
