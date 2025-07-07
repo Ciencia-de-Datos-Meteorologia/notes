@@ -31,6 +31,7 @@ En la máquina cliente (ejemplo Debian/Ubuntu):
 ```bash
 sudo apt update
 sudo apt install autossh
+```
 2. Crear el archivo del servicio systemd
 
 Crea un archivo llamado autossh-tunnel.service en /etc/systemd/system/:
@@ -59,24 +60,26 @@ RestartSec=10
 WantedBy=multi-user.target
 
 Si quieres exponer localmente localhost:5000 en el servidor remoto 138.118.104.87 en el puerto 5000, y tu usuario local es data-base, el ExecStart sería:
-
+```
 ExecStart=/usr/bin/autossh -M 0 \
     -o ServerAliveInterval=60 \
     -o ServerAliveCountMax=3 \
     -o StrictHostKeyChecking=no \
     -o ExitOnForwardFailure=yes \
     -N -R 5000:localhost:5000 sensores@138.118.104.87
+```
 3. Recargar systemd y habilitar el servicio
 
+```
 sudo systemctl daemon-reload
 sudo systemctl enable autossh-tunnel.service
 sudo systemctl start autossh-tunnel.service
-
+```
 4. Verificar que el servicio está activo y funcionando
-
+```
 sudo systemctl status autossh-tunnel.service
 tail -f /home/tu_usuario_local/autossh.log
-
+```
 5. Comprobar en el servidor remoto
 
 En el servidor remoto, verifica que el puerto remoto está escuchando:
@@ -94,4 +97,3 @@ PermitOpen any
 Y reinicia el SSH:
 
 sudo systemctl restart ssh
-
