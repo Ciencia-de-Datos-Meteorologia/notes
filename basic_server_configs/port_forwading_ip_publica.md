@@ -35,6 +35,10 @@ sudo apt install autossh
 2. Crear el archivo del servicio systemd
 
 Crea un archivo llamado autossh-tunnel.service en /etc/systemd/system/:
+```
+
+sudo nano /etc/systemd/system/autossh-tunnel.service
+```
 
 Pega el siguiente contenido, ajustando las variables REMOTE_USER, REMOTE_HOST, REMOTE_PORT y LOCAL_PORT según tu caso:
 ```
