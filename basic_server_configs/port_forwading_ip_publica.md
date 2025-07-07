@@ -19,7 +19,7 @@ Este repositorio contiene instrucciones y archivos para crear un túnel SSH remo
 - `autossh` instalado en la máquina cliente.
 - Permisos para editar y recargar servicios `systemd` en la máquina cliente.
 - Configuración del servidor SSH remoto que permita `AllowTcpForwarding`.
-
+- Colocar llave ssh de la computadora local en la computadora con ip publica
 ---
 
 ## Pasos para configurar el túnel persistente
@@ -83,17 +83,18 @@ tail -f /home/tu_usuario_local/autossh.log
 5. Comprobar en el servidor remoto
 
 En el servidor remoto, verifica que el puerto remoto está escuchando:
-
+```
 sudo netstat -tulnp | grep REMOTE_PORT
-
+```
 Notas importantes
 
-    El servidor SSH remoto debe permitir el reenvío de puertos. Para eso, en /etc/ssh/sshd_config en el servidor remoto, asegúrate que estén configuradas estas líneas:
-
+El servidor SSH remoto debe permitir el reenvío de puertos. Para eso, en /etc/ssh/sshd_config en el servidor remoto, asegúrate que estén configuradas estas líneas:
+```
 AllowTcpForwarding yes
 GatewayPorts yes
 PermitOpen any
-
+```
 Y reinicia el SSH:
-
+```
 sudo systemctl restart ssh
+```
